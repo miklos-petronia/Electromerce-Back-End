@@ -14,3 +14,13 @@ ProductTag.init(
             autoIncrement: true,
             allowNull: false,
         },
+        
+        // Product Tag Name Column
+        product_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "product",
+                key: "id"
+            }
+        },
