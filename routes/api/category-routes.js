@@ -78,3 +78,20 @@ router.put("/:id", async (req, res) => {
               res.json(err);
           }
       });
+
+      router.delete('/:id', async (req, res) => {
+          // delete a category by its `id` value
+          try {
+              const categoryDeleted = await Category.destroy({
+                  where: {
+                      id: req.params.id,
+                  },
+              });
+              res.json(categoryDeleted);
+          } catch (err) {
+              res.json(err);
+          }
+      });
+
+
+      module.exports = router;
