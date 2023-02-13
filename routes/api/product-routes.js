@@ -69,6 +69,7 @@ router.post('/', (req, res) => {
 // find all associated tags from ProductTag
 return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
+    
     .then((productTags) => {
     // get list of current tag_ids
     const productTagIds = productTags.map(({ tag_id }) => tag_id);
@@ -99,3 +100,19 @@ return ProductTag.findAll({ where: { product_id: req.params.id } });
         res.status(400).json(err);
     });
 });
+
+router.delete('/:id', async (req, res) => {
+    // delete one product by its `id` value
+    try {
+        const productDeleted = await Product.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        res.json(productDeleted);
+    } catch (err) {
+        res.json(err);
+    }
+});
+
+module.exports = router;
