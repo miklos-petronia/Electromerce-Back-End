@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
         res.json(err);
     }
 });
+
 router.get('/:id', async (req, res) => {
     try {
         // find a single tag by its `id`
@@ -48,6 +49,7 @@ router.post("/", async (req, res) => {
         res.json(err);
     }
 });
+
 
 router.put("/:id", async (req, res) => {
     try {
