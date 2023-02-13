@@ -19,3 +19,18 @@ router.get('/', async (req, res) => {
         res.json(err);
     }
 });
+// get one product
+router.get('/:id', async (req, res) => {
+    try {
+        // find a single product by its `id`
+        const product = await Product.findByPk(req.params.id, {
+            include: [
+                { model: Category },
+                { model: Tag, through: ProductTag },
+            ],
+        });
+        res.json(product);
+    } catch (err) {
+        res.json(err);
+    }
+});
