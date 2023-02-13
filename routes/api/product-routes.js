@@ -86,3 +86,16 @@ return ProductTag.findAll({ where: { product_id: req.params.id } });
         const productTagsToRemove = productTags
             .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
             .map(({ id }) => id);
+
+        // run both actions
+        return Promise.all([
+            ProductTag.destroy({ where: { id: productTagsToRemove } }),
+            ProductTag.bulkCreate(newProductTags),
+        ]);
+    })
+    .then((updatedProductTags) => res.json(updatedProductTags))
+    .catch((err) => {
+        // console.log(err);
+        res.status(400).json(err);
+    });
+});
