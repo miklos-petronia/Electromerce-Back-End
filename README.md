@@ -55,6 +55,7 @@ To start the application, type the following into the terminal: $ node server.js
  8. npm run start
 
 ## Video illustration
+
 https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share_link
 
 ## License 
@@ -65,5 +66,3 @@ Columbia classes videos, documentations & some videos online
 
 ## Contributors
 N/A
-
-
