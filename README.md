@@ -50,12 +50,11 @@ To start the application, type the following into the terminal: $ node server.js
  4. npm i mysql
  5. npm i sequelize 
  6. Make sure to run .sql file in mySQL workbench
- 7. npm run seed
  7. SOURCE ./db/shema.sql
- 8. npm run start
+ 8. npm run seed
+ 9. npm run start
 
 ## Video illustration
-
 https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share_link
 
 ## License 
