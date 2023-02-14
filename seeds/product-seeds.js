@@ -1,27 +1,28 @@
+
 const { Product } = require('../models');
 
 const productData = [
     {
-        product_name: 'Plain T-Shirt',
-        price: 14.99,
-        stock: 14,
+        product_name: 'T-Shirt',
+        price: 15.99,
+        stock: 15,
         category_id: 1,
     },
     {
-        product_name: 'Running Sneakers',
-        price: 90.0,
-        stock: 25,
+        product_name: 'Running Shoes',
+        price: 96.0,
+        stock: 27,
         category_id: 5,
     },
     {
-        product_name: 'Branded Baseball Hat',
-        price: 22.99,
-        stock: 12,
+        product_name: 'Branded Baseball Cap',
+        price: 24.99,
+        stock: 13,
         category_id: 4,
     },
     {
-        product_name: 'Top 40 Music Compilation Vinyl Record',
-        price: 12.99,
+        product_name: 'Top 100 Music Compilation Vinyl Record',
+        price: 13.99,
         stock: 50,
         category_id: 3,
     },
