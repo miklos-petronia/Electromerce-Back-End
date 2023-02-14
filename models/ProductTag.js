@@ -6,8 +6,8 @@ class ProductTag extends Model { }
 
 ProductTag.init(
     {
-        // define columns
-        // Unique Identifier
+    // define pillar
+    // Unique ID
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -15,7 +15,7 @@ ProductTag.init(
             allowNull: false,
         },
         
-        // Product Tag Name Column
+    // Product Tag Name Pillar
         product_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -24,7 +24,8 @@ ProductTag.init(
                 key: "id"
             }
         },
-        // Product Tag Id column
+    
+ // Product Tag Id Pillar
         tag_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
