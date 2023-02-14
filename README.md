@@ -3,14 +3,14 @@
 ## Description
 My task is to build the back end for an e-commerce site by modifying starter code. I will have to configure a working Express.js API to use Sequelize to interact with a MySQL database.
 
-# User Story
+## User Story
 
 ```md
 AS A manager at an internet retail company
 I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies
 ```
-# Acceptance Criteria
+## Acceptance Criteria
 
 ```md
 GIVEN a functional Express.js API
@@ -25,7 +25,7 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 
-# Table of Contents
+## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
