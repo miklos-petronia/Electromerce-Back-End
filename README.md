@@ -54,7 +54,8 @@ To start the application, type the following into the terminal: $ node server.js
  7. SOURCE ./db/shema.sql
  8. npm run start
 
-## Screenshots
+## Video illustration
+https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view
 
 ## License 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
