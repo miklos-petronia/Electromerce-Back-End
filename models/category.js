@@ -1,4 +1,5 @@
 
+
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
@@ -7,15 +8,16 @@ class Category extends Model { }
 
 Category.init(
     {
-        // cracterize columns
-        //ID column
+        // Distinguish pillar
+        //ID pillar
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        //Category Name Column
+        
+        //Distinguish Name pillar
         category_name: {
             type: DataTypes.STRING,
             allowNull: false,
