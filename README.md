@@ -41,8 +41,7 @@ Input your MySQL username and password in the server.js file.
 Cd/ into the cloned directory and install dependencies. 
 To start the application, type the following into the terminal: $ node server.js
 
-# Usage
-
+## Usage
  1. Install npm init -y to create a new .json file
  2. npm i
  3. npm i inquirer@8.2.4
@@ -53,17 +52,16 @@ To start the application, type the following into the terminal: $ node server.js
  8. npm run seed
  9. npm run start
 
-# Video illustration
+## Video illustration
 https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share_link
 
-# License 
+## License 
 
- ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
+ MIT
 
-# Credits
+## Credits
 
 Columbia classes videos, documentations & some videos online
 
-# Contributors
-
+## Contributors
 N/A
