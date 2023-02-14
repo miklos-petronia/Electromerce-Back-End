@@ -1,31 +1,36 @@
-// import important parts of sequelize library
+
+ // Get crucial elements of sequelize library
 const { Model, DataTypes } = require('sequelize');
-//This code causes an error:
-// const { all } = require('sequelize/types/lib/operators');
-// import our database connection from config.js
+
+ //Error is caused within this code
+ 
+ // const { all } = require('sequelize/types/lib/operators');
+
+ // Get our database information connection from config javascript
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
+ // Run Product framework by extending off Sequelize's framework class
 class Product extends Model { } 
 
-// set up fields and rules for Product model
+ // Add fields and system for Product framework
 Product.init(
     {
-        //Unique identifier
+    //Uncommon ID
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        //Product name column
+        
+    //Product name pillar
         product_name: {
             type: DataTypes.STRING,
             allowNull: false,
 
         },
 
-        //Product price column as a decimal number
+    //Product price pillar as a decimal number
         price: {
             type: DataTypes.DECIMAL(11, 2),
             allowNull: false,
@@ -33,7 +38,8 @@ Product.init(
                 isDecimal: true,
             }
         },
-        //Product stock column can only be a number 
+        
+    //Product stock pillar can only be a number 
         stock: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -42,7 +48,8 @@ Product.init(
                 isNumeric: true,
             }
         },
-        //Category id links product to its respective category.
+        
+    //Category iddentifier acociates product to its various category.
         category_id: {
             type: DataTypes.INTEGER,
             references: {
