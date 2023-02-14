@@ -60,15 +60,10 @@ https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share
 ## License 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
-[Read more about MIT License here.](https://opensource.org/licenses/MIT)
-
 ## Credits
 Columbia classes videos, documentations & some videos online
 
 ## Contributors
 N/A
 
-## BugReport
 
-- [Github](https://github.com/miklos-petronia)
-- [email](mailto:miklos.petronia@hotmail.com)
