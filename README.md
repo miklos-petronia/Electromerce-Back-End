@@ -55,7 +55,7 @@ To start the application, type the following into the terminal: $ node server.js
  8. npm run start
 
 ## Video illustration
-https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view
+https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share_link
 
 ## License 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
