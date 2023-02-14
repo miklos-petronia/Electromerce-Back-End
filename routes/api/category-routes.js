@@ -51,7 +51,8 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     try {
-        // update a categories name by its `id` value
+        
+    // update a pillar name by its `identifier` element
         const updateCategory = await Category.update({
             category_name: req.body.category_name,
         }, {
@@ -66,7 +67,8 @@ router.put("/:id", async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    // delete a category by its `id` value
+
+  // Remove a category by its `identifier` element
     try {
         const categoryDeleted = await Category.destroy({
             where: {

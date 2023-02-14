@@ -1,13 +1,14 @@
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
-// The `/api/products` endpoint
+ // The `/api/products` endpoint
 
-// get all products
+ // Obtain all products
 router.get('/', async (req, res) => {
     try {
-        // find all products
-        // be sure to include its associated Category and Tag data
+       
+        // Find every products
+        // Be sure to insert its related Category and Tag data information
         const getProducts = await Product.findAll({
             include: [
                 { model: Category },
@@ -20,10 +21,10 @@ router.get('/', async (req, res) => {
     }
 });
 
-// get one product
+// Obatin one product
 router.get('/:id', async (req, res) => {
     try {
-        // find a single product by its `id`
+        // Search a single product by its `identifier`
         const product = await Product.findByPk(req.params.id, {
             include: [
                 { model: Category },
@@ -36,19 +37,12 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// create new product
+// develop new product
 router.post('/', (req, res) => {
-    /* req.body should look like this...
-      {
-        product_name: "Basketball",
-        price: 200.00,
-        stock: 3,
-        tagIds: [1, 2, 3, 4]
-      }
-    */
+    
     Product.create(req.body)
         .then((product) => {
-            // if there's product tags, we need to create pairings to bulk create in the ProductTag model
+            // if there's product tags,  develop pairings to bulk develop in the ProductTag framework
             if (req.body.tagIds.length) {
                 const productTagIdArr = req.body.tagIds.map((tag_id) => {
                     return {
@@ -58,7 +52,7 @@ router.post('/', (req, res) => {
                 });
                 return ProductTag.bulkCreate(productTagIdArr);
             }
-            // if no product tags, just respond
+            // if there is no product tags, just answer
             res.status(200).json(product);
         })
         .then((productTagIds) => res.status(200).json(productTagIds))
@@ -70,20 +64,23 @@ router.post('/', (req, res) => {
 
 // update product
 router.put('/:id', (req, res) => {
-    // update product data
+    
+// update product data information
     Product.update(req.body, {
         where: {
             id: req.params.id,
         },
     })
         .then((product) => {
-            // find all associated tags from ProductTag
+            // Search all related tags from ProductTag
             return ProductTag.findAll({ where: { product_id: req.params.id } });
         })
         .then((productTags) => {
-            // get list of current tag_ids
+        
+        // Obtain list of present tag_ids
             const productTagIds = productTags.map(({ tag_id }) => tag_id);
-            // create filtered list of new tag_ids
+            
+        // Develop filtered list of new tag_ids
             const newProductTags = req.body.tagIds
                 .filter((tag_id) => !productTagIds.includes(tag_id))
                 .map((tag_id) => {
@@ -92,12 +89,13 @@ router.put('/:id', (req, res) => {
                         tag_id,
                     };
                 });
-            // figure out which ones to remove
+        
+         // find out the ones to delete
             const productTagsToRemove = productTags
                 .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
                 .map(({ id }) => id);
 
-            // run both actions
+        // run both elements
             return Promise.all([
                 ProductTag.destroy({ where: { id: productTagsToRemove } }),
                 ProductTag.bulkCreate(newProductTags),
@@ -111,7 +109,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    // delete one product by its `id` value
+    // remove one product by its `identifier` element
     try {
         const productDeleted = await Product.destroy({
             where: {

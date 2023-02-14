@@ -6,7 +6,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         // find all tags
-        // be sure to include its associated Product data
+        // be sure to insert its related Product information
         const getAllTags = await Tag.findAll({
             attributes: ["id", "tag_name"],
             include: [{
@@ -23,8 +23,8 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        // find a single tag by its `id`
-        // be sure to include its associated Product data
+        // Search a single tag by its `identifier`
+        // be sure to insert its related Product data information
         const getTagById = await Tag.findByPk(req.params.id, {
             include: [{
                 model: Product,
@@ -40,7 +40,7 @@ router.get('/:id', async (req, res) => {
 
 router.post("/", async (req, res) => {
     try {
-        // create a new tag
+        // develop a new tag
         const createTag = await Tag.create({
             tag_name: req.body.tag_name,
         });
@@ -53,7 +53,7 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     try {
-        // update a tag's name by its `id` value
+        // update a tag's name by its `identifier` element
         const updateTag = await Tag.update({
             tag_name: req.body.tag_name,
         }, {
@@ -68,7 +68,7 @@ router.put("/:id", async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    // delete a tag by its `id` value
+    // remove a tag by its `identifier` element
     try {
         const tagDeleted = await Tag.destroy({
             where: {
