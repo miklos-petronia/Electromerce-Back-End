@@ -3,15 +3,14 @@
 ## Description
 My task is to build the back end for an e-commerce site by modifying starter code. I will have to configure a working Express.js API to use Sequelize to interact with a MySQL database.
 
-## User Story
+# User Story
 
 ```md
 AS A manager at an internet retail company
 I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies
 ```
-
-## Acceptance Criteria
+# Acceptance Criteria
 
 ```md
 GIVEN a functional Express.js API
@@ -26,7 +25,7 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 
-## Table of Contents
+# Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -42,7 +41,7 @@ Input your MySQL username and password in the server.js file.
 Cd/ into the cloned directory and install dependencies. 
 To start the application, type the following into the terminal: $ node server.js
 
-## Usage
+# Usage
 
  1. Install npm init -y to create a new .json file
  2. npm i
@@ -54,17 +53,17 @@ To start the application, type the following into the terminal: $ node server.js
  8. npm run seed
  9. npm run start
 
-## Video illustration
+# Video illustration
 https://drive.google.com/file/d/1EPPBPRWuPERqSqaIIjjAgvLhpBFdvbcp/view?usp=share_link
 
-## License 
+# License 
 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
-## Credits
+# Credits
 
 Columbia classes videos, documentations & some videos online
 
-## Contributors
+# Contributors
 
 N/A
