@@ -33,7 +33,7 @@ THEN I am able to successfully create, update, and delete data in my database
 * [Contributors](#contributors)
 * [Report Bugs](#bugreport)
 
-## Installation
+## Instalation
 Clone the repository in your terminal machine or git bash
 Clone Via SSH: $ git clone git@github.com:miklos-petronia/Electromerce-Back-End.git
 
